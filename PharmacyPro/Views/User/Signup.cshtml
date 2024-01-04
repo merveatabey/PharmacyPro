@@ -1,0 +1,64 @@
+﻿@model PharmacyPro.Models.UserRegisterViewModel
+@{
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/styles.css"/>
+</head>
+<body>
+    <form method="post" asp-action="Signup">
+         <div class="wrapper">   
+            <h1>Kayıt Ol</h1>   
+            <div class="input-box">
+                <label>Ad</label>
+                <span asp-validation-for="Name" class="text-danger" />
+                <input type="text" asp-for="Name" class="form-control" />
+            </div>
+            <div class="input-box">
+                <label>Soyad</label>
+                <span asp-validation-for="Surname" class="text-danger" />
+                <input type="text"asp-for="Surname" class="form-control"/>
+            </div>
+            <div class="input-box">
+                <label>TC Kimlik No</label>
+                <span asp-validation-for="IdentityNumber" class="text-danger" />
+                <input type="text" asp-for="IdentityNumber" class="form-control"/>
+            </div>
+            <div class="input-box">
+                <label>Mail</label>
+                <span asp-validation-for="Email" class="text-danger" />
+                <input type="text" asp-for="Email" class="form-control"/>
+            </div>
+            <div class="input-box">
+                <label>Telefon</label>
+                <span asp-validation-for="PhoneNumber" class="text-danger" />
+                <input type="text" asp-for="PhoneNumber" class="form-control"/>
+            </div>
+            <div class="input-box">
+                <label>Adres</label>
+                <span asp-validation-for="Address" class="text-danger" />
+                <input type="text" asp-for="Address" class="form-control"/>
+            </div>
+            <div class="input-box">
+                <label>Şifre</label>
+                <span asp-validation-for="Password" class="text-danger" />
+                <input type="password" asp-for="Password" class="form-control" />
+            </div>
+            <div class="input-box">
+                <label>Şifre Tekrar</label>
+                <span asp-validation-for="ConfirmPassword" class="text-danger" />
+                <input type="password" asp-for="ConfirmPassword" class="form-control" />
+            </div>
+            <button type="submit" class="btn">Kaydet</button>
+            <div class="register-link">
+                <p>Zaten bir hesabınız var mı? <a href="/Login">Giriş Yap</a></p>
+            </div>
+        </div>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
